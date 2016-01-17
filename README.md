@@ -1,2 +1,2 @@
 # ZST-SNMP
-SNMP client and REST serwer
+SNMP client and REST server
