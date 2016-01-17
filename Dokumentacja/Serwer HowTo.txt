@@ -3,7 +3,14 @@ IIS HowTO
 Start IIS on Windows
 1. Click Start and then click Control Panel.
 2. In Control Panel, click Programs and then click Turn Windows features on or off.
-3. In the Windows Features dialog box, click Internet Information Services and then click OK.
+3. In the Windows Features dialog box, click Internet Information Services
+4. W World Wide Web Services -> Application Development Features zaznaczamy:
+	- .Net Extensibility 4.6
+	- ASP.NET 4.6
+	- ISAPI Extensions
+	- ISAPI Filters
+	- Server-Side Includes
+	- WebSocket Protocol
 
 Jeżeli wali błędem pomocny może być artykuł
 https://support.microsoft.com/en-us/kb/2734782
@@ -11,7 +18,10 @@ https://support.microsoft.com/en-us/kb/2734782
 Ścieżka do folderu gdzie IIS trzyma nasze strony
 %SystemDrive%\inetpub\wwwroot
 
-Dodajemy do Handler Map Sscript Map
-UID
-C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_isapi.dll
+Tworzymy nowy plik o nazwie
+snmpservice
 
+Wrzucamy do tego pliku wszystko z folderu Site znajdującego się w projekcie
+
+w IIS zmieniamy naszą stronę na aplikację
+Done powinno działać!

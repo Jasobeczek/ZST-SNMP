@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestWebService", "RESTServer\RestWebService\RestWebService\RestWebService.csproj", "{44AD83AF-4D22-4B07-83EF-7A1B0F8A3E67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNMP-Client", "SNMP-Client\SNMP-Client\SNMP-Client.csproj", "{91A95E43-EBB9-490D-8FD0-B3AA1FB9A5CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNMP-NMS-STATION", "SNMP-NMS-STATION\SNMP-NMS-STATION\SNMP-NMS-STATION.csproj", "{BFBB05B8-5192-4217-9906-04E11AA56780}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44AD83AF-4D22-4B07-83EF-7A1B0F8A3E67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44AD83AF-4D22-4B07-83EF-7A1B0F8A3E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44AD83AF-4D22-4B07-83EF-7A1B0F8A3E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44AD83AF-4D22-4B07-83EF-7A1B0F8A3E67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91A95E43-EBB9-490D-8FD0-B3AA1FB9A5CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91A95E43-EBB9-490D-8FD0-B3AA1FB9A5CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91A95E43-EBB9-490D-8FD0-B3AA1FB9A5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91A95E43-EBB9-490D-8FD0-B3AA1FB9A5CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFBB05B8-5192-4217-9906-04E11AA56780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFBB05B8-5192-4217-9906-04E11AA56780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFBB05B8-5192-4217-9906-04E11AA56780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFBB05B8-5192-4217-9906-04E11AA56780}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

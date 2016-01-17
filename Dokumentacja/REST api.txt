@@ -1,0 +1,11 @@
+REST Server komunikacja
+
+Get - pobranie pojedynczego elemntu
+api?element=[UID]
+
+Get - pobranie tabeli 
+api?table=[UID]
+
+Put - aktualizacja pojedynczego elementu
+api
+
