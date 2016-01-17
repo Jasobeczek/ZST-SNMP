@@ -24,7 +24,7 @@ namespace SNMP_NMS_STATION
 
             return result;
         }
-        public Variable SNMP_GET (string adres)
+        public Variable SNMP_GET(string adres)
         {
             var result = Messenger.Get(VersionCode.V1,
                            new IPEndPoint(IPAddress.Parse("127.0.0.1"), 161),
@@ -41,7 +41,7 @@ namespace SNMP_NMS_STATION
             Pdu pdu = new Pdu(PduType.Set);
             // Set a value to integer
             pdu.VbList.Add(new Oid(adres), new SnmpSharpNet.Integer32(int.Parse(value)));
-            
+
             // Set Agent security parameters
             AgentParameters aparam = new AgentParameters(SnmpVersion.Ver2, new SnmpSharpNet.OctetString("public"));
             // Response packet
@@ -56,8 +56,6 @@ namespace SNMP_NMS_STATION
                 // If exception happens, it will be returned here
                 target.Close();
                 return String.Format("Request failed with exception: {0}", ex.Message);
-                
-                
             }
             // Make sure we received a response
             if (response == null)
@@ -80,6 +78,5 @@ namespace SNMP_NMS_STATION
                 }
             }
         }
-
-        }
+    }
 }

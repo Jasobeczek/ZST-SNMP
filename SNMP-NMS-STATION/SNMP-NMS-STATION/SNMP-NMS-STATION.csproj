@@ -39,15 +39,17 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SharpSnmpLib.Full">
+    <Reference Include="SharpSnmpLib.Full, Version=8.5.10222.9, Culture=neutral, PublicKeyToken=4c00852d3788e005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\RESTServer\RestWebService\packages\Lextm.SharpSnmpLib.8.5.0.0\lib\net40\SharpSnmpLib.Full.dll</HintPath>
     </Reference>
-    <Reference Include="SharpSnmpLib.Portable">
+    <Reference Include="SharpSnmpLib.Portable, Version=8.5.10222.9, Culture=neutral, PublicKeyToken=4c00852d3788e005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\RESTServer\RestWebService\packages\Lextm.SharpSnmpLib.8.5.0.0\lib\net40\SharpSnmpLib.Portable.dll</HintPath>
     </Reference>
     <Reference Include="SnmpSharpNet, Version=0.9.4.0, Culture=neutral, PublicKeyToken=b2181aa3b9571feb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\RESTServer\RestWebService\packages\SnmpSharpNet.0.9.4\lib\SnmpSharpNet.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

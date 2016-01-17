@@ -33,7 +33,7 @@ namespace RestWebService
 
                 switch (context.Request.HttpMethod)
                 {
-                    case "GET":                 
+                    case "GET":
                         Read(context);
                         break;
                     case "POST":
@@ -68,10 +68,15 @@ namespace RestWebService
         /// <exception cref="System.NotImplementedException"></exception>
         private void Read(HttpContext context)
         {
-            if (context.Request.QueryString["uid"] != null)
+            if (context.Request.QueryString["element"] != null)
             {
-                String response = this.AccessLayer.Get(context.Request["uid"].ToString());
-                //String response = context.Request.QueryString["uid"];
+                String response = this.AccessLayer.Get(context.Request["element"].ToString());
+                context.Response.ContentType = "text/json";
+                WriteResponse(response);
+            }
+            else if (context.Request.QueryString["table"] != null)
+            {
+                String response = this.AccessLayer.GetTable(context.Request["table"].ToString());
                 context.Response.ContentType = "text/json";
                 WriteResponse(response);
             }
@@ -83,17 +88,23 @@ namespace RestWebService
 
         private void Delete(HttpContext context)
         {
-            WriteResponse("TESTING-delete");
+            WriteResponse("error");
         }
 
+        /// <summary>
+        /// Updates the specified context.
+        /// </summary>
+        /// <param name="context">The context.</param>
         private void Update(HttpContext context)
         {
-            WriteResponse("TESTING-update");
+            String response = this.AccessLayer.Set(context.Request.BinaryRead(context.Request.ContentLength));
+            context.Response.ContentType = "text";
+            WriteResponse(response);
         }
 
         private void Create(HttpContext context)
         {
-            WriteResponse("TESTING-create");
+            WriteResponse("error");
         }
     }
 }
