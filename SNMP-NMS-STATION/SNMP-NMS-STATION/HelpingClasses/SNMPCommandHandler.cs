@@ -26,7 +26,7 @@ namespace SNMP_NMS_STATION
         }
         public Variable SNMP_GET(string adres)
         {
-            var result = Messenger.Get(VersionCode.V1,
+            IList<Variable> result = Messenger.Get(VersionCode.V1,
                            new IPEndPoint(IPAddress.Parse("127.0.0.1"), 161),
                            new Lextm.SharpSnmpLib.OctetString("public"),
                            new List<Variable> { new Variable(new ObjectIdentifier(adres)) },

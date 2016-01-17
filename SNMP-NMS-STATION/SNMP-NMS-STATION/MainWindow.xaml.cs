@@ -1,4 +1,4 @@
-﻿using Lextm.SharpSnmpLib;
+using Lextm.SharpSnmpLib;
 using Lextm.SharpSnmpLib.Messaging;
 using SNMP_NMS_STATION.AdditionalWindows;
 using System;
@@ -38,9 +38,11 @@ namespace SNMP_NMS_STATION
         };
         private List<string> scalarNames;
         private List<string> tablesNames;
+        private List<string> scalarChangeNames;
         private SNMPCommandHandler handler;
         private Dictionary<string, string> tables;
         private Dictionary<string, string> scalars;
+        private Dictionary<string, string> scalarsChange;
 
         public MainWindow()
         {
@@ -91,6 +93,13 @@ namespace SNMP_NMS_STATION
                 {"ipRoutingDiscards",".1.3.6.1.2.1.4.23.0" }
             };
             scalarNames = scalars.Keys.ToList();
+
+            scalarsChange = new Dictionary<string, string>()
+            {
+                {"ipForwarding",".1.3.6.1.2.1.4.1.0" },
+                {"ipDefaultTTL",".1.3.6.1.2.1.4.2.0"}
+            };
+            scalarChangeNames = scalarsChange.Keys.ToList();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -122,7 +131,7 @@ namespace SNMP_NMS_STATION
                     selectBox.ItemsSource = scalarNames;
                     break;
                 case 4:
-                    selectBox.ItemsSource = scalarNames;
+                    selectBox.ItemsSource = scalarChangeNames;
                     break;
             }
         }
