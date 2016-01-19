@@ -1,0 +1,1 @@
+cd SNMP-Client\SNMP-Client\bin\Debug\ & start SNMP-NMS-STATION.exe
